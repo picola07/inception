@@ -1,0 +1,8 @@
+From debian:buster
+RUN apt-get update -y && apt-get install mariadb-server -y
+ENV MYSQL_ROOT_PASSWORD=1234
+ENV MYSQL_ROOT_DATABASE=MYSQL_ROOT_DATABASE
+ENV MYSQL_ROOT_user=ilabyed
+ENV MYSQL_PASSWORD=MYSQL_PASSWORD
+
+EXPOSE 3306
