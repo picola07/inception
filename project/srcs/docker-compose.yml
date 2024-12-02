@@ -21,7 +21,7 @@ services:
       - .env
     networks:
       - wp_network
-  #   restart: always
+    # restart: always
   wordpress:
     container_name: wordpress
     build: ./requirements/wordpress/.
@@ -40,6 +40,13 @@ services:
 volumes:
   wordpress:
   mariadb:
+    driver: local
+    driver_opts:
+      device: ./requirements/mariadb/conf/data
+      o: bind
+      type: none
+
+
 
 networks:
   wp_network:

@@ -5,7 +5,7 @@ DB_USER="mysql_user"
 DB_PASSWORD="12345"
 DB_HOST="localhost"
 
-sleep(1000)
+sleep 10
 mkdir /var/www/
 mkdir -p /var/www/html || echo "Failed to create /var/www/html"
 
